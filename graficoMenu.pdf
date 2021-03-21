@@ -1,0 +1,28 @@
+// restaurante
+digraph {
+	restaurante [label="Restaurante LFP"]
+	seccionBebidas [label=Bebidas]
+	restaurante -> seccionBebidas
+	opcionbebida_1 [label="Bebida #1 Q.11.00
+Descripción Bebida 1"]
+	seccionBebidas -> opcionbebida_1
+	opcionbebida_2 [label="Bebida #2 Q.10.50
+Descripción Bebida 2"]
+	seccionBebidas -> opcionbebida_2
+	seccionDesayunos [label=Desayunos]
+	restaurante -> seccionDesayunos
+	opciond1 [label="Desayuno 1 Q.45.00
+Descripción Desayuno 1"]
+	seccionDesayunos -> opciond1
+	opciond2 [label="Desayuno 2 Q.40.00
+Descripción Desayuno 2"]
+	seccionDesayunos -> opciond2
+	opciond3 [label="Desayuno 3 Q.35.00
+Descripción Desayuno 3"]
+	seccionDesayunos -> opciond3
+	"seccion  Postres" [label="  Postres"]
+	restaurante -> "seccion  Postres"
+	opcionpos_001 [label="Postre 1 Q.25.00
+Descripción Postre 1"]
+	"seccion  Postres" -> opcionpos_001
+}
