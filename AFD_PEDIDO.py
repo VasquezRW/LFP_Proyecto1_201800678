@@ -168,10 +168,11 @@ def afd_pedido(ruta):
                         num_Dec += 1
                     elif charCode == 32 or charCode == 37 or charCode == 44:
                         # print(f"se acepta {cache} como Numero")
-                        if (tkCorrecto is False) or (num_Dec == 0):
+                        if num_Dec == 0:
+                            cache += "0"
+                        if tkCorrecto is False:
                             tkE = tokenError(noError, cache, fila, posicion - len(cache), "numero no valido")
                             erroresPedidos.append(tkE)
-                            cache += "0"
                             noError += 1
                         tk = token(noToken, cache, fila, posicion - len(cache), "Numero")
                         tokensPedidos.append(tk)

@@ -180,8 +180,9 @@ def afd_Entrada(ruta):
                         # print(f"se acepta {cache} como Numero")
                         tk = token(noToken, cache, fila, posicion - len(cache), "Numero")
                         tokens.append(tk)
-
-                        if tkCorrecto is False or num_Dec == 0:
+                        if num_Dec == 0:
+                            cache += "0"
+                        if tkCorrecto is False:
                             tkE = tokenError(noError, cache, fila, posicion - len(cache), "numero no valido")
                             errores.append(tkE)
                             noError += 1
